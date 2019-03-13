@@ -36,6 +36,7 @@ public class DefaultHeader extends RelativeLayout implements RefreshHeader {
     protected RefreshKernel mRefreshKernel;
     protected int mBackgroundColor;
     protected int mAccentColor;
+    protected int mTextSize;
 
     public DefaultHeader(Context context) {
         super(context);
