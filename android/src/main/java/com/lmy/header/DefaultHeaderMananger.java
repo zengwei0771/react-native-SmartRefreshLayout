@@ -39,4 +39,14 @@ public class DefaultHeaderMananger extends SimpleViewManager<DefaultHeader> {
     public void setAccentColor(DefaultHeader view,String accentColor){
         view.setAccentColor(Color.parseColor(accentColor));
     }
+
+    /**
+     * 设置字体大小
+     * @param view
+     * @param textSize
+     */
+    @ReactProp(name = "textSize")
+    public void setTextSize(DefaultHeader view,int textSize){
+        view.setTextSize(textSize);
+    }
 }

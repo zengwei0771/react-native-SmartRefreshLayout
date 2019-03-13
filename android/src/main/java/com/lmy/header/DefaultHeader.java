@@ -188,5 +188,13 @@ public class DefaultHeader extends RelativeLayout implements RefreshHeader {
         mHeaderText.setTextColor(accentColor);
         return this;
     }
+    public DefaultHeader setTextSize(int textSize){
+        mTextSize=textSize;
+        mHeaderText.setTextSize(textSize);
+        RelativeLayout.LayoutParams lr = new RelativeLayout.LayoutParams(DensityUtil.dp2px(textSize*20/15), DensityUtil.dp2px(textSize*20/15));
+        mArrowView.setLayoutParams(lr);
+        mProgressView.setLayoutParams(lr);
+        return this;
+    }
 
 }
