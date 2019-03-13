@@ -2,6 +2,8 @@ package com.lmy.smartrefreshlayout;
 
 import android.content.Context;
 import android.view.MotionEvent;
+import android.view.ViewParent;
+import android.view.ViewGroup;
 
 import com.facebook.react.uimanager.events.NativeGestureUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -32,6 +34,12 @@ public class ReactSmartRefreshLayout extends SmartRefreshLayout {
             // Update values that must be set after initial layout.
            // setProgressViewOffset(mProgressViewOffset);
            // setRefreshing(mRefreshing);
+        }
+        
+        //修复刷新组件超出父组件视窗之外
+        ViewParent p = getParent();
+        if (p != null) {
+            ((ViewGroup)p).setClipChildren(true);
         }
     }
 
